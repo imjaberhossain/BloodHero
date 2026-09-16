@@ -20,8 +20,9 @@ public class Message {
 
     @Column(columnDefinition = "TEXT")
     private String content;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 
+    @Column(name = "created_at") // timestamp কি-ওয়ার্ড এড়াতে কলাম নেম দেওয়া হলো
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime timestamp = LocalDateTime.now();
 
     public Message() {}
