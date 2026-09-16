@@ -2,6 +2,7 @@ package com.bloodhero.backend.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name = "messages")
@@ -19,6 +20,7 @@ public class Message {
 
     @Column(columnDefinition = "TEXT")
     private String content;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 
     private LocalDateTime timestamp = LocalDateTime.now();
 
