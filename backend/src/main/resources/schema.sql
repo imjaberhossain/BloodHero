@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS messages (
                                         receiver_id BIGINT,
                                         content TEXT,
                                         timestamp TIMESTAMP
-)
+);
