@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/requests")
-
+@CrossOrigin(originPatterns = "*", allowCredentials = "true")
 public class RequestController {
 
     private final BloodRequestRepository requestRepository;
