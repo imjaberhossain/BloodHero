@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-// Spring Boot backend base URL
 const API = axios.create({
-  baseURL: 'http://localhost:8080/api',
+  baseURL: process.env.REACT_APP_API_BASE_URL || 'https://bloodhero-backend.onrender.com/api',
   headers: {
     'Content-Type': 'application/json',
   },
